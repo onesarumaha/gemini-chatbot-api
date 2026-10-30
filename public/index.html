@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#eef3ef" />
-  <title>Triva | Asisten Perjalanan</title>
+  <meta name="theme-color" content="#eaf4f9" />
+  <title>SIPANDA | Asisten Puskesmas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -14,31 +14,51 @@
   <div class="container">
     <header class="app-header">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true">T</div>
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4v16M4 12h16"/>
+          </svg>
+        </div>
         <div>
-          <h1>Triva</h1>
-          <p>Asisten perjalanan pribadi</p>
+          <h1>SIPANDA</h1>
+          <p>Sistem Informasi Pelayanan Puskesmas</p>
         </div>
       </div>
-      <div class="availability"><span class="status-dot" aria-hidden="true"></span>Siap membantu</div>
+      <div class="availability"><span class="status-dot" aria-hidden="true"></span>Petugas siap melayani</div>
     </header>
 
-    <div id="chat-box" class="chat-box" role="log" aria-label="Percakapan dengan Triva" aria-live="polite" aria-relevant="additions text">
+    <div id="chat-box" class="chat-box" role="log" aria-label="Percakapan dengan petugas puskesmas" aria-live="polite" aria-relevant="additions text">
       <section class="empty-state" id="empty-state">
-        <span class="welcome-label">TEMAN JALAN-JALANMU</span>
-        <h2>Perjalanan berikutnya dimulai dari sini.</h2>
-        <p>Ceritakan tujuan, tanggal, atau gaya liburan yang kamu inginkan. Kita rencanakan bersama.</p>
-        <div class="prompt-list" aria-label="Ide pesan">
-          <button type="button" data-prompt="Buatkan itinerary 3 hari di Bali">Itinerary 3 hari di Bali</button>
-          <button type="button" data-prompt="Kapan waktu terbaik untuk liburan ke Jepang?">Waktu terbaik ke Jepang</button>
-          <button type="button" data-prompt="Beri ide liburan keluarga yang santai">Ide liburan keluarga</button>
+        <div class="welcome-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+        </div>
+        <span class="welcome-label">LAYANAN KESEHATAN 24 JAM</span>
+        <h2>Selamat datang di Puskesmas Digital.</h2>
+        <p>Tanyakan jadwal poli, keluhan kesehatan, atau informasi layanan. Petugas kami siap membantu dengan ramah. 😊</p>
+        <div class="prompt-list" aria-label="Ide pertanyaan">
+          <button type="button" data-prompt="Jadwal poli umum hari ini jam berapa?">
+            <span class="prompt-icon">🩺</span> Jadwal poli umum
+          </button>
+          <button type="button" data-prompt="Apa saja syarat pendaftaran pasien baru?">
+            <span class="prompt-icon">📋</span> Syarat pasien baru
+          </button>
+          <button type="button" data-prompt="Bagaimana cara cek tekanan darah di puskesmas?">
+            <span class="prompt-icon">❤️</span> Cek tekanan darah
+          </button>
         </div>
       </section>
     </div>
 
     <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Mau pergi ke mana?" autocomplete="off" aria-label="Tulis pesan untuk Triva" required />
-      <button type="submit">Kirim</button>
+      <input type="text" id="user-input" placeholder="Tulis keluhan atau pertanyaan Anda..." autocomplete="off" aria-label="Tulis pesan untuk petugas" required />
+      <button type="submit">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/>
+        </svg>
+        <span>Kirim</span>
+      </button>
     </form>
   </div>
   <script src="script.js"></script>
