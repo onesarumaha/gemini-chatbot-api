@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#eef3ef" />
+  <title>Triva | Asisten Perjalanan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">T</div>
+        <div>
+          <h1>Triva</h1>
+          <p>Asisten perjalanan pribadi</p>
+        </div>
+      </div>
+      <div class="availability"><span class="status-dot" aria-hidden="true"></span>Siap membantu</div>
+    </header>
+
+    <div id="chat-box" class="chat-box" role="log" aria-label="Percakapan dengan Triva" aria-live="polite" aria-relevant="additions text">
+      <section class="empty-state" id="empty-state">
+        <span class="welcome-label">TEMAN JALAN-JALANMU</span>
+        <h2>Perjalanan berikutnya dimulai dari sini.</h2>
+        <p>Ceritakan tujuan, tanggal, atau gaya liburan yang kamu inginkan. Kita rencanakan bersama.</p>
+        <div class="prompt-list" aria-label="Ide pesan">
+          <button type="button" data-prompt="Buatkan itinerary 3 hari di Bali">Itinerary 3 hari di Bali</button>
+          <button type="button" data-prompt="Kapan waktu terbaik untuk liburan ke Jepang?">Waktu terbaik ke Jepang</button>
+          <button type="button" data-prompt="Beri ide liburan keluarga yang santai">Ide liburan keluarga</button>
+        </div>
+      </section>
+    </div>
+
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Mau pergi ke mana?" autocomplete="off" aria-label="Tulis pesan untuk Triva" required />
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
